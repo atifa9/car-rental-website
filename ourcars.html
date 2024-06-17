@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cars - DRIVE EASY Rentals</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+        header {
+            background-image: url('ban.jpg'); /* Replace 'header-bg.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .navbar-brand {
+            font-family: 'fantasy';
+            color: #1F45FC !important;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: gray;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .current-page {
+            color: blue !important;
+        }
+        .rent-item {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+	.rent-item img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        
+        .rent-item h4 {
+            color: #333;
+        }
+        .btn-primary {
+            background-color: #1F45FC;
+            border-color: #1F45FC;
+        }
+        .btn-primary:hover {
+            background-color: #0d2eac;
+            border-color: #0d2eac;
+        }
+        .container.pt-5.pb-3 .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container.pt-5.pb-3 .col-lg-4, .container.pt-5.pb-3 .col-md-6 {
+            display: flex;
+            flex: 1 1 30%;
+            max-width: 30%;
+            margin: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: left;
+            width: 1200px; /* Ensure footer spans the entire width */
+            margin-top: 20px;
+        }
+        .footer-link {
+            color: white;
+        }
+        .content-container {
+            max-width: 1200px; /* Set the maximum width of the content */
+            margin: 0 auto; /* Center the content horizontally */
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body style="font-family: 'sans-serif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #EBF4FA; background-image: url('lbg.jpg'); background-size: cover; background-position: center; ">
+
+<header style="background-color: #000; color: #fff; padding: 30px 0; text-align: center; margin-bottom: 20px;">
+    <h1 style="color: #1a5283; font-weight: bold; font-family: 'fantasy'; margin: 0; padding: 10px;">DRIVE EASY</h1>
+</header>
+<div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+
+    <nav style="text-align: center; margin-bottom: 20px;">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services1.html" class="nav-link ">Services</a>
+        <a href="feedback.html" class="nav-link">Feedback</a>
+        <a href="ourcars.html" class="nav-link current-page">Our Cars</a>
+        <a href="routes.html" class="nav-link">Plan Trips</a>
+    </nav>
+<div class="content-container">
+  <h1 class="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
+  
+    <div class="row">
+        <!-- Car Listings Start -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="audi.jpg" alt="">
+                <h4 class="text-uppercase mb-4">AUDI</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2018</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>70K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services2.html">$199.00/Day</a>
+            </div>
+        </div>
+ <!-- Car Listings Start -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="toyota.jpg" alt="">
+                <h4 class="text-uppercase mb-4">TOYOTA</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2015</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>MANUAL</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>25K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services2.html">$159.00/Day</a>
+            </div>
+        </div>
+ <!-- Car Listings Start -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="mahindra.jpg" alt="">
+                <h4 class="text-uppercase mb-4">MAHINDRA</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2017</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>MANUAL</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>45K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services2.html">$99.00/Day</a>
+            </div>
+        </div>
+ <!-- Car Listings Start -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="rollsroyce.jpg" alt="">
+                <h4 class="text-uppercase mb-4">ROLLSROYCE</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2015</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>90K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services2.html">$299.00/Day</a>
+            </div>
+        </div>
+ <!-- Car Listings Start -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="bmw.jpg" alt="">
+                <h4 class="text-uppercase mb-4">BMW</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2020</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>65K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services2.html">$189.00/Day</a>
+            </div>
+        </div>
+ <!-- Car Listings Start -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="maruti.jpg" alt="">
+                <h4 class="text-uppercase mb-4">MARUTI</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2022</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>ELECTRIC</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>80K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services2.html">$199.00/Day</a>
+            </div>
+        </div>
+<div class="container pt-5 pb-3">
+    <h1 class="display-4 text-uppercase text-center mb-5">Find Your SPORTS BIKE</h1>
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="KAWASAKI.jpg" alt="">
+                <h4 class="text-uppercase mb-4">KAWASAKI</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2019</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>25K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$299.00/Day</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="KTM.jpg" alt="">
+                <h4 class="text-uppercase mb-4">KTM DUKE</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2015</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>50K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$89.00/Day</a>
+            </div>
+        </div>      
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="BMWG3.jpg" alt="">
+                <h4 class="text-uppercase mb-4">BMW G3</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2024</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>150K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$499.00/Day</a>
+            </div>
+        </div>
+<div class="container pt-5 pb-3">
+    <h1 class="display-4 text-uppercase text-center mb-5">Find Your Adventure tourer bikes</h1>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="ROYALENFIELD.jpg" alt="">
+                <h4 class="text-uppercase mb-4">ROYAL ENFIELD</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2020</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>MANUAL</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>200K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$169.00/Day</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="HEROPULSE.jpg" alt="">
+                <h4 class="text-uppercase mb-4">HERO PULSE</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2022</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>125K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$199.00/Day</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="DUCATI.jpg" alt="">
+                <h4 class="text-uppercase mb-4">DUCATI</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2021</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>AUTO</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>90K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$299.00/Day</a>
+            </div>
+        </div>
+<div class="container pt-5 pb-3">
+    <h1 class="display-4 text-uppercase text-center mb-5">Find Your Scooter</h1>
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="activa.jpg" alt="">
+                <h4 class="text-uppercase mb-4">ACTIVA 5G</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2015</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>MANUAL</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>70K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$59.00/Day</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="TVS.jpg" alt="">
+                <h4 class="text-uppercase mb-4">TVS JUPITER</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2019</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>MANUAL</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>28K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$79.00/Day</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="rent-item">
+                <img class="img-fluid mb-4" src="OLA.jpg" alt="">
+                <h4 class="text-uppercase mb-4">OLA EV</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>2022</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-cogs text-primary mr-1"></i>
+                        <span>ELCETRIC </span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>20K</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="services3.html">$129.00/Day</a>
+            </div>
+        </div>
+
+<!-- Banner Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row mx-0">
+                <div class="col-lg-6 px-0">
+                    <div class="px-5 bg-light d-flex align-items-center justify-content-between" style="height: 350px;">
+                        <img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="banner-left.png" alt="">
+                        <div class="text-right">
+                            <h3 class="text-uppercase text-dark mb-3">Want to be driver?</h3>
+                            <p class="mb-4">Do you enjoy driving and want to make money on your own schedule? With Drive Easy, you can earn money by providing rides to our customers. Whether you have your own car or not, we have opportunities for you!</p>
+                            <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0">
+                    <div class="px-5 bg-secondary d-flex align-items-center justify-content-between" style="height: 350px;">
+                        <div class="text-left">
+                            <h3 class="text-uppercase text-light mb-3">Looking for a car?</h3>
+ <p class="mb-4">Choose from our wide selection of well-maintained cars and enjoy hassle-free renting. With affordable rates and convenient booking options, finding the perfect car for your needs has never been easier.</p>
+                            
+                            <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
+                        </div>
+                        <img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="banner-right.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+<div style="max-width: 1200px; margin: 0 auto; padding: 30px;">
+    <h2 style="text-align: center;">Our Partners</h2>
+    <div style="display: flex; justify-content: space-between; align-items: left ;">
+        <img src="vendor-1.png" alt="Vendor 1" style="width: 200px;">
+        <img src="vendor-2.png" alt="Vendor 2" style="width: 200px;">
+        <img src="vendor-3.png" alt="Vendor 3" style="width: 200px;">
+        <img src="vendor-4.png" alt="Vendor 1" style="width: 200px;">
+        <img src="vendor-5.png" alt="Vendor 2" style="width: 200px;">
+       
+      
+    </div>
+</div>
+
+<footer>
+    <div class="content-container">
+         <div style="max-width: 1200px; margin: 0 auto;">
+        <div>
+            <p>Get In Touch:</p>
+            <p>📍 123 Street, Hyderabad, India &nbsp; &nbsp; &nbsp; 📞 +012 345 67890 &nbsp; &nbsp; &nbsp; ✉️ driveeasy@gmail.com</p>
+            <p>Follow Us: &nbsp; &nbsp; &nbsp; 📸 📘 🐦</p>
+            <p>Useful Links:</p>
+            <p><a href="about.html#privacy-policy">Privacy Policy</a> | <a href="about.html#help-faqs">Help & FAQs</a></p>
+        </div>
+    </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

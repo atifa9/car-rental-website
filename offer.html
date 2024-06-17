@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+        body {
+            background-image: url('lbg.jpg'); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: left;
+        }
+
+        .footer-link {
+            color: white;
+        }
+        
+
+        .offer-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .offer-card:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer-card .card-header {
+            background-color: #007bff;
+            color: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+
+        .offer-card .card-body {
+            padding: 30px;
+        }
+
+        .offer-card .offer-highlights {
+            margin-bottom: 20px;
+        }
+
+        .offer-card .offer-highlights h5 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+            color: #007bff;
+        }
+
+        .offer-card .offer-highlights ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .offer-card .offer-highlights li {
+            margin-bottom: 10px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .offer-card .offer-highlights li i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .offer-card .terms-conditions p {
+            font-size: 0.875rem;
+        }
+
+        .testimonial-carousel .carousel-inner {
+            border-radius: 10px;
+        }
+
+        .testimonial-carousel .carousel-control-prev, .testimonial-carousel .carousel-control-next {
+            color: #007bff;
+            font-size: 2rem;
+        }
+
+        .testimonial-carousel .carousel-control-prev-icon, .testimonial-carousel .carousel-control-next-icon {
+            background-color: rgba(0, 123, 255, 0.2);
+            border-radius: 50%;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const offerName = urlParams.get('offer');
+            const offerHighlights = {
+                'Weekend Getaway Special': [
+                    '20% discount on weekend getaways',
+                    'Free additional driver',
+                    'Unlimited mileage'
+                ],
+                'Family Vacation Deal': [
+                    'Spacious SUV or minivan',
+                    'Unlimited mileage',
+                    'Free child seats'
+                ],
+                'Business Traveler Package': [
+                    '15% discount on luxury sedans',
+                    'Complimentary GPS',
+                    'Priority customer service'
+                ]
+            };
+            const offerHighlightList = document.getElementById('offerHighlights');
+
+            document.getElementById('offerName').textContent = offerName;
+
+            if (offerHighlights[offerName]) {
+                offerHighlights[offerName].forEach(highlight => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<i class="fas fa-check-circle"></i> ${highlight}`;
+                    offerHighlightList.appendChild(li);
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="offer-card mb-4">
+                    <div class="card-header">
+                        Your Special Offer
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="offerName"></h5>
+                        <p class="card-text">Congratulations! You have successfully unlocked this special offer. Enjoy the benefits and make the most out of this exclusive deal.</p>
+                        <a href="index.html" class="btn btn-primary">Back to Home</a>
+                    </div>
+                </div>
+
+                <!-- Offer Highlights -->
+                <div class="offer-card mb-4">
+                    <div class="card-header">
+                        Offer Highlights
+                    </div>
+                    <div class="card-body offer-highlights">
+                        <ul id="offerHighlights"></ul>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="offer-card mb-4">
+                    <div class="card-header">
+                        Terms and Conditions
+                    </div>
+                    <div class="card-body terms-conditions">
+                        <p>Please read the terms and conditions carefully:</p>
+                        <ul>
+                            <li>The offer is valid for a limited time only.</li>
+                            <li>The discount applies to specific car categories only.</li>
+                            <li>Other terms and conditions may apply.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Customer Testimonials -->
+                <div class="offer-card testimonial-carousel">
+                    <div class="card-header">
+                        Customer Testimonials
+                    </div>
+                    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-block w-100">
+                                    <div class="testimonial text-center">
+                                        <p>"Drive Easy made my weekend trip amazing with their special offer. Highly recommended!"</p>
+                                        <footer class="blockquote-footer">Michael Stevens</footer>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-block w-100">
+                                    <div class="testimonial text-center">
+                                        <p>"Great deals and exceptional service. I'll definitely use Drive Easy again!"</p>
+                                        <footer class="blockquote-footer;">Jennifer Rodriguez</footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div>
+                
+                <p>Get In Touch:</p>
+                <p>📍 123 Street, Hyderabad, India &nbsp; &nbsp; &nbsp; 📞 +012 345 67890 &nbsp; &nbsp; &nbsp; ✉️ driveeasy@gmail.com</p>
+                <p>Follow Us: &nbsp; &nbsp; &nbsp; 📸 📘 🐦</p>
+                <p>Useful Links:</p>
+                <p><a href="about.html#privacy-policy">Privacy Policy</a> | <a href="about.html#help-faqs">Help & FAQs</a></p>
+                <div class="text-center">
+                    <p>&copy; 2024 Drive Easy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wash Services</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+          body {
+            background-image: url('lbg.jpg'); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar-brand {
+            font-family: 'fantasy';
+            color: #1F45FC !important;
+        }
+
+       
+        header {
+            background-image: url('ban.jpg'); /* Replace 'header-bg.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: gray;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+        .content {
+            text-align: left;
+        }
+        .content h1 {
+            font-size: 45px;
+            font-weight: bold;
+            color: #333; /* Dark color */
+        }
+        .content p {
+            font-size: 28px;
+            color: #BCC6CC; /* Platinum color */
+        }
+        .content .price {
+            color: #838996; /* Roman Silver color */
+        }
+        .text-right img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            right: -10%;
+            max-width: 800px; /* Increase the maximum width of the image */
+        }
+        .btn-primary {
+            margin-top: 40px;
+            padding: 15px 30px; /* Increase button padding */
+            font-size: 24px; /* Increase button font size */
+            background-color: #000; /* Black button color */
+            color: #fff; /* White button text color */
+        }
+        .premium-text {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .premium-text h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000; /* Black color */
+        }
+        .premium-text p {
+            font-size: 24px;
+            color: #BCC6CC; /* Platinum color */
+        }
+        .features {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .feature-img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .feature-text {
+            color: #000; /* Black color */
+            font-size: 24px;
+        }
+        .included-text {
+            text-align: center;
+            margin-top: 50px;
+            color: #000; /* Black color */
+            font-weight: bold;
+            font-size: 36px;
+        }
+        .included-details {
+            text-align: center;
+            color: #808080; /* Grey color */
+            font-size: 24px;
+        }
+        .pressure-text {
+            position: relative;
+            left: 150px;
+            text-align: middle;
+            color: #006400; /* Dark Green color */
+            font-size: 40px; /* Increase the size of "Pressure Foam Wash" text */
+            padding-right: 200px; /* Adjust padding */
+        }
+        .pressure-desc {
+            color: #000; /* Green color */
+            font-size: 15px; /* Decrease the size of the description text */
+            padding-right: 20px; /* Adjust padding */
+        }
+        .check-mark {
+            color: #000; /* Black color */
+        }
+        .spray-img {
+            position: absolute;
+            left: 5%;
+            width: 80%;
+            float: left ;
+        }
+        .confirmation-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .steps-title {
+            text-align: center;
+            margin-top: 50px;
+            color: #000; /* Black color */
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .steps-img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background-color: white; color: black;">
+
+    <header>
+        <h1 style="color:#1a5283; font-weight: bold; font-family: 'fantasy'; margin: 0; padding: 10px;">DRIVE EASY</h1>
+    </header>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+
+        <nav style="text-align: center; margin-bottom: 10px;">
+            <a href="index.html" class="nav-link">Home</a>
+            
+            <a href="services4.2.html" class="nav-link current-page">Back</a>
+            
+        </nav>
+<div class="content-section">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="content">
+                <h1>Book a premium 60-min car wash at your doorstep</h1>
+                <p>Pressure wash with powerful equipment, <span class="price">starting at ₹349</span>.</p>
+                <a href="#" class="btn btn-primary" id="bookNow">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="col-md-6 text-right">
+            <img src="premium.png" alt="Car Wash" class="img-fluid">
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="premium-text">
+    <h2>Premium Materials Used</h2>
+    <p>We use only premium industry-best products, carefully chosen for proper care of your car.</p>
+</div>
+
+<div class="features">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="Exterior_Shampoo.png" alt="Premium Exterior Shampoo" class="feature-img">
+            <p class="feature-text" style="color: #004225;">Premium Exterior Shampoo</p>
+        </div>
+        <div class="col-md-3">
+            <img src="Dashboard_Dresser.png" alt="Premium Dashboard Dresser" class="feature-img">
+            <p class="feature-text" style="color: #004225;">Premium Dashboard Dresser</p>
+        </div>
+        <div class="col-md-3">
+            <img src="pressure_wash.png" alt="Pressure Wash" class="feature-img">
+            <p class="feature-text" style="color: #004225;">Pressure Wash</p>
+        </div>
+        <div class="col-md-3">
+            <img src="vacuum.png" alt="Interior Vacuum" class="feature-img">
+            <p class="feature-text" style="color:  #004225;">Interior Vacuum</p>
+        </div>
+    </div>
+</div>
+
+<div class="included-text">
+    <p>What's Included</p>
+</div>
+
+<div class="included-details">
+    <p>Employee Service Wash is a transparent process where your exteriors and interiors are professionally cleaned.</p>
+    <br> 
+    <br> <!-- Added more space after the line -->
+</div>
+
+<div class="row pressure-text">
+    <div class="col-md-6">
+        <img src="spray.png" alt="Pressure Wash" class="img-fluid spray-img">
+    </div>
+    <div class="col-md-6">
+        <p>PRESSURE FOAM WASH</p>
+        <div class="pressure-desc">
+            <p>A powerful pressure wash machine is used to clean your car effectively with water. Foam wash using Premium Shampoo gives you a perfect shine by removing persistent dirt stains and marks from the body.</p>
+            <p><span class="check-mark">&#10004;</span> Pressure wash machine</p>
+            <p><span class="check-mark">&#10004;</span> Premium Shampoo for foam</p>
+            <p><span class="check-mark">&#10004;</span> Less than 2 buckets of water</p>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br>
+<div class="row pressure-text">
+    <div class="col-md-6" style="text-align: left;">
+        <p> INTERIOR VACUUM</p>
+        <div class="pressure-desc">
+            <p style="text-align: left;">Car interiors are cleaned with a high-quality powerful vacuum machine that removes the majority of ingrained dust from the car seats and floors.</p>
+            <p style="text-align: left;"><span class="check-mark">&#10004;</span> Deep dust removal</p>
+            <p style="text-align: left;"><span class="check-mark">&#10004;</span> Powerful suction capacity</p>
+            <p style="text-align: left;"><span class="check-mark">&#10004;</span> Connects to an external AC source</p>
+            <p style="text-align: left;"><span class="check-mark">&#10004;</span> Double sanitization</p>
+        </div>
+    </div>
+    <div class="col-md-6" style="margin-left: -10px;">
+        <img src="interior.png" alt="Pressure Wash" class="img-fluid spray-img">
+    </div>
+</div>
+
+<br><br><br><br><br><br><br>
+
+<div class="row pressure-text">
+    <div class="col-md-6">
+        <img src="polish.png" alt="Pressure Wash" class="img-fluid spray-img">
+    </div>
+    <div class="col-md-6">
+        <p>TYRE AND DASHBOARD POLISH</p>
+        <div class="pressure-desc">
+            <p>Dashboard dressing effectively restores gloss to plastic, vinyl and rubber surfaces and protects surfaces from UV rays & fading. </p>
+            <p><span class="check-mark">&#10004;</span> Premium products only  </p>
+            <p><span class="check-mark">&#10004;</span>  Dashboards, Door Panels, Trims  </p>
+            <p><span class="check-mark">&#10004;</span> Restore tyre shine</p>
+            <br>
+        </div>
+    </div>
+</div>
+
+<div class="confirmation-box" id="confirmationBox">
+    <span class="close-btn" onclick="closeConfirmationBox()">&times;</span>
+    <p>BOOKING CONFIRMED!</p>
+    <p>Your ORDER ID is: <span id="orderID"></span></p>
+    <p>Use this reference ID to make the payment to the employee upon their arrival at your doorstep.</p>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function closeConfirmationBox() {
+        document.getElementById("confirmationBox").style.display = "none";
+    }
+
+    document.getElementById("bookNow").addEventListener("click", function() {
+        document.getElementById("confirmationBox").style.display = "block";
+        var orderID = Math.random().toString(36).substr(2, 9).toUpperCase();
+        document.getElementById("orderID").innerText = orderID;
+    });
+</script>
+
+<!-- Steps Title and Image -->
+<div class="steps-title">
+    <h2>Easy steps for availing our doorstep services</h2>
+    <img src="steps.png" alt="Easy Steps" class="steps-img">
+</div>
+
+</body>
+</html>

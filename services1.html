@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DRIVE EASY Rentals</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('lbg.jpg'); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar-brand {
+            font-family: 'fantasy';
+            color: #1F45FC !important;
+        }
+
+        header {
+            background-image: url('ban.jpg'); /* Replace 'header-bg.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: left;
+        }
+
+        .footer-link {
+            color: white;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: gray;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .current-page {
+            color: blue !important;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .service-item {
+            text-align: center;
+        }
+
+        .service-item img {
+            width: 100%; /* Set image width to 100% of its container */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 300px; /* Set maximum width for images */
+            max-height: 200px; /* Set maximum height for images */
+        }
+
+        .service-item p {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .service-item p a {
+            color: rgb(28, 28, 60);
+            text-decoration: none;
+        }
+
+        .car {
+            position: absolute;
+            top: 50%;
+            right: -200px; /* Starting position from the right */
+            animation: moveLeft 20s linear infinite; /* Move left animation */
+        }
+
+        @keyframes moveLeft {
+            0% {
+                right: -200px; /* Starting position */
+            }
+            100% {
+                right: calc(100% + 200px); /* Ending position */
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: white; color: black;">
+
+    <header>
+        <h1 style="color: #1a5283; font-weight: bold; font-family: 'fantasy'; margin: 0; padding: 10px;">DRIVE EASY</h1>
+        <span class="car" style="font-size: 40px;">🚙</span>
+    </header>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+
+        <nav style="text-align: center; margin-bottom: 20px;">
+            <a href="index.html" class="nav-link ">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services1.html" class="nav-link current-page">Services</a>
+            <a href="feedback.html" class="nav-link">Feedback</a>
+            <a href="ourcars.html" class="nav-link">Our Cars</a>
+            <a href="routes.html" class="nav-link">Plan Trips</a>
+        </nav>
+
+        <div class="content-section">
+            <h2 style="text-align: center;">Welcome to our Rental and other Services!</h2>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <a href="services2.html">
+                        <img src="carrent.jpg" alt="Car 1">
+                    </a>
+                    <p><a href="services2.html">RENT A CAR</a></p>
+                </div>
+                <div class="service-item">
+                    <a href="services3.html">
+                        <img src="bikerent.jpg" alt="Car 2">
+                    </a>
+                    <p><a href="services3.html">RENT A BIKE</a></p>
+                </div>
+                <div class="service-item">
+                    <a href="autorep.html">
+                        <img src="autorep.jpg" alt="Car 3">
+                    </a>
+                    <p><a href="autorep.html">REPAIRING SERVICES</a></p>
+                </div>
+                <div class="service-item">
+                    <a href="services4.html">
+                        <img src="autoclean.jpg" alt="Car 4">
+                    </a>
+                    <p><a href="services4.html">CLEANING SERVICES</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 10px;">Join our rewards program to attain benefits. <a href="rewards.html" class="footer-link" style="color: blue; font-size: 16px; margin-left: 10px;">Click here</a></p>
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div>
+                <p>Get In Touch:</p>
+                <p>📍 123 Street, Hyderabad, India &nbsp; &nbsp; &nbsp; 📞 +012 345 67890 &nbsp; &nbsp; &nbsp; ✉️ driveeasy@gmail.com</p>
+                <p>Follow Us: &nbsp; &nbsp; &nbsp; 📸 📘 🐦</p>
+                <p>Useful Links:</p>
+                <p><a href="about.html#privacy-policy">Privacy Policy</a> | <a href="about.html#help-faqs">Help & FAQs</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

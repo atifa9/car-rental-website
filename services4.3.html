@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DRIVE EASY Rentals</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+          body {
+            background-image: url('lbg.jpg'); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar-brand {
+            font-family: 'fantasy';
+            color: #1F45FC !important;
+        }
+
+        header {
+            background-image: url('ban.jpg'); /* Replace 'header-bg.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-link {
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: gray;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+
+        .services-grid {
+            display: flex;
+            gap: 90px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .service-item {
+            text-align: center;
+        }
+
+        .service-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Circular frame */
+            object-fit: cover; /* Ensures the image fits within the circular frame */
+        }
+         .title {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #2ecc71;
+            font-size: 24px; /* Same font size as the first webpage */
+            font-family: 'fantasy'; /* Use fantasy font family */
+            padding: 10px; /* Add padding to match the first webpage */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 600px; /* Decreased box size */
+            height: 400px; /* Decreased box size */
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            margin-top: 50px; /* Adjusted margin to make the steps visible */
+        }
+
+        .box img {
+            width: 100%;
+            height: 300px; /* Decreased image height */
+            object-fit: cover;
+            margin-top: 0;
+        }
+
+        .box h3 {
+            margin-top: -120px; /* Adjusted text margin */
+        }
+
+    </style>
+</head>
+
+<body style="background-color: white; color: black;">
+
+    <header>
+        <h1 style="color:#1a5283; font-weight: bold; font-family: 'fantasy'; margin: 0; padding: 10px;">DRIVE EASY</h1>
+    </header>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+
+        <nav style="text-align: center; margin-bottom: 20px;">
+            <a href="index.html" class="nav-link">Home</a>
+            
+            <a href="services4.2.html" class="nav-link current-page">Back</a>
+            
+        </nav>
+
+       <h1 class="title">Visual guide on Self-Service Car Wash: Washing, Rinsing, & Drying</h1>
+
+       <div class="container">
+        <div class="box" id="box1">
+            <h3>STEP 1: Pull into an empty bay and park your car</h3>
+            <img src="wash1.jpg" alt="Step 1">
+        </div>
+        <div class="box" id="box2">
+            <h3>STEP 2: Hang your floor mats on the provided metal clips</h3>
+            <img src="wash2.jpg" alt="Step 2">
+        </div>
+        <div class="box" id="box3">
+            <h3>STEP 3: Insert coins or a credit card into the machine</h3>
+            <img src="wash3.jpg" alt="Step 3">
+        </div>
+        <div class="box" id="box4">
+            <h3>STEP 4: Set the dial to “Wash” or “Pre-Soak”</h3>
+            <img src="wash4.jpg" alt="Step 4">
+        </div>
+        <div class="box" id="box5">
+            <h3>STEP 5: Stand about 3 to 5 feet (0.91 to 1.52 m) away from your car as you wash</h3>
+            <img src="wash5.jpg" alt="Step 5">
+        </div>
+        <div class="box" id="box6">
+            <h3>STEP 6: Rinse your entire car with water and Apply soap to your car with the spray wand</h3>
+            <img src="wash6.jpg" alt="Step 6">
+        </div>
+        <div class="box" id="box7">
+            <h3>STEP 7: Rinse the foam brush with the spray wand</h3>
+            <img src="wash7.jpg" alt="Step 7">
+        </div>
+        <div class="box" id="box8">
+            <h3>STEP 8: Apply tire cleaner to the wheels and tires</h3>
+            <img src="wash8.jpg" alt="Step 8">
+        </div>
+    </div>
+    
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        let currentIndex = 0;
+    
+        function showNextBox() {
+            if (currentIndex < boxes.length) {
+                boxes[currentIndex].style.display = 'flex';
+                setTimeout(hideCurrentBox, 5000);
+            } else {
+                currentIndex = 0; // Reset index after the 8th picture
+                hideCurrentBox(); // Start the loop again
+            }
+            currentIndex++;
+        }
+    
+        function hideCurrentBox() {
+            if (currentIndex <= boxes.length) {
+                boxes[currentIndex - 1].style.display = 'none';
+                showNextBox();
+            }
+        }
+    
+        showNextBox();
+    </script>
+    
+
+</body>
+</html>

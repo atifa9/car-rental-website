@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental - RIDE EASY Rentals</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .selection-box {
+    background-color: #fff; /* Set a background color to ensure visibility */
+    padding: 20px; /* Add padding to create space around the content */
+    border-radius: 5px; /* Add rounded corners for a nicer appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+        .navbar-brand {
+            font-family: 'fantasy';
+            color: #1F45FC !important;
+        }
+
+        header {
+            background-image: url('ban.jpg'); /* Replace 'header-bg.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: left;
+        }
+
+        .footer-link {
+            color: white;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: gray;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .current-page {
+            color: blue !important;
+        }
+        /* Styles for the car details square format */
+        #car-details {
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        
+        #car-details > div > img {
+            max-width: 700px;
+            border-radius: 90px;
+            margin-bottom: 90px;
+        }
+
+        /* Styles for the bill */
+        #bill {
+            display: none;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+        #confirm-box {
+            text-align: center; /* Align the content to the center */
+        }
+
+    </style>
+</head>
+<body style="font-family: 'sans-serif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #fff;">
+
+    <header style="background-color: #000; color: #fff; padding: 30px 0; text-align: center; margin-bottom: 20px;">
+        <h1 style="color:#1a5283; font-weight: bold; font-family: 'fantasy'; margin: 0; padding: 10px;">DRIVE EASY</h1>
+    </header>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+
+    <nav style="text-align: center; margin-bottom: 20px;">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services1.html" class="nav-link current-page">Services</a>
+        <a href="feedback.html" class="nav-link">Feedback</a>
+        <a href="ourcars.html" class="nav-link">Our Cars</a>
+        <a href="routes.html" class="nav-link">Plan Trips</a>
+    </nav>
+
+    <div style="margin-top: 50px;">
+        <h2 style="text-align: center;">Car Rental Service</h2>
+
+        <!-- Age Selection Box -->
+        <div class="row justify-content-center">
+            <div class="col-md-4 selection-box" id="age-selection-box">
+                <label for="age">Please select your age:</label><br>
+                <select id="age" name="age">
+                    <option value="above21">Above 21</option>
+                    <option value="below21">Below 21</option>
+                </select>
+                <br><br>
+                <button onclick="showCarOptions()">Submit</button>
+            </div>
+        </div>
+
+        <!-- Car Options -->
+        <div id="car-options" style="display: none;">
+            <!-- Pickup and Return Details -->
+            <div class="row justify-content-center">
+                <div class="col-md-4 selection-box">
+                    <form action="#" method="post">
+                        <label for="pickup-location">Pickup Location:</label><br>
+                        <select id="pickup-location" name="pickup-location" class="form-control">
+                            <option value="Hyderabad Airport">Hyderabad Airport</option>
+                            <option value="Banjara Hills">Banjara Hills</option>
+                            <option value="Hitech City">Hitech City</option>
+                            <option value="Charminar">Charminar</option>
+                            <option value="Secunderabad">Secunderabad</option>
+                            <option value="Gachibowli">Gachibowli</option>
+                            <option value="Jubilee Hills">Jubilee Hills</option>
+                            <option value="Madhapur">Madhapur</option>
+                            <option value="Kondapur">Kondapur</option>
+                            <option value="Begumpet">Begumpet</option>
+                        </select>
+                        <br>
+                        <label for="drop-location">Drop Location:</label><br>
+                        <select id="drop-location" name="drop-location" class="form-control">
+                            <option value="Hyderabad Airport">Hyderabad Airport</option>
+                            <option value="Banjara Hills">Banjara Hills</option>
+                            <option value="Hitech City">Hitech City</option>
+                            <option value="Charminar">Charminar</option>
+                            <option value="Secunderabad">Secunderabad</option>
+                            <option value="Gachibowli">Gachibowli</option>
+                            <option value="Jubilee Hills">Jubilee Hills</option>
+                            <option value="Madhapur">Madhapur</option>
+                            <option value="Kondapur">Kondapur</option>
+                            <option value="Begumpet">Begumpet</option>
+                        </select>
+                        <br>
+                        <label for="pickup-date">Pickup Date:</label><br>
+                        <input type="date" id="pickup-date" name="pickup-date" class="form-control">
+                        <br>
+                        <label for="pickup-time">Pickup Time:</label><br>
+                        <input type="time" id="pickup-time" name="pickup-time" class="form-control">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Return Details and car Selection -->
+            <div class="row justify-content-center">
+                <div class="col-md-4 selection-box">
+                    <form action="#" method="post">
+                        <label for="return-date">Return Date:</label><br>
+                        <input type="date" id="return-date" name="return-date" class="form-control">
+                        <br>
+                        <label for="return-time">Return Time:</label><br>
+                        <input type="time" id="return-time" name="return-time" class="form-control">
+                        <br>
+                        <label for="car-selection">Select a Car:</label><br>
+                        <select id="car-selection" name="car-selection" class="form-control">
+                            <option value="Audi">Audi</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Maruti">Maruti</option>
+                            <option value="Mahindra">Mahindra</option>
+                            <option value="Rolls Royce">Rolls Royce</option>
+                        </select>
+                        <br>
+                        <button type="button" class="btn btn-primary" onclick="displayCarDetails()">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display car details here based on selection -->
+        <div class="row justify-content-center">
+            <div id="car-details">
+                <!-- car details will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Confirm button -->
+        <div class="row justify-content-center">
+            <div class="col-md-4 selection-box" id="confirm-box" style="display: none;">
+                <button type="button" class="btn btn-success" onclick="confirmBooking()">Confirm Booking</button>
+            </div>
+        </div>
+
+        <!-- Bill section -->
+        <div id="bill" class="alert alert-info alert-dismissible fade show" role="alert">
+            <h3>Booking Confirmed</h3>
+            <p>Thank you for choosing us!</p>
+            <p>Reservation Number: <span id="reservation-number"></span></p>
+            <div style="text-align: left;">
+                <p>Pickup Location: <span id="pickup-location-display"></span></p>
+                <p>Drop Location: <span id="drop-location-display"></span></p>
+                <p>Pickup Date: <span id="pickup-date-display"></span></p>
+                <p>Pickup Time: <span id="pickup-time-display"></span></p>
+                <p>Return Date: <span id="return-date-display"></span></p>
+                <p>Return Time: <span id="return-time-display"></span></p>
+                <p>Car Selected: <span id="car-selected-display"></span></p>
+                
+               <p style="text-align: center ;font-size: 18px; font-weight: bold;">Please show this bill to our executive while picking up the car.</p>
+               <p style="text-align: center ;font-size: 18px; font-weight: bold;">Have a safe and pleasant journey!</p>
+             
+            </div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showCarOptions() {
+        document.getElementById('car-options').style.display = 'block';
+        document.getElementById('age-selection-box').style.display = 'none';
+    }
+    function showCarOptions() {
+    var ageSelection = document.getElementById("age").value;
+    if (ageSelection === "below21") {
+        alert("Sorry, you cannot rent a car. You are underage.");
+    } else {
+        document.getElementById('car-options').style.display = 'block';
+        document.getElementById('age-selection-box').style.display = 'none';
+    }
+}
+
+    function displayCarDetails() {
+    var carSelection = document.getElementById("car-selection").value;
+    var carDetailsHTML;
+
+    switch (carSelection) {
+        case 'Audi':
+            carDetailsHTML = `
+                <div style="background-color: #f9f9f9; border: 2px solid #333; border-radius: 10px; padding: 20px; text-align: center;">
+                    <img src="audi.jpg" alt="Audi" style="width: 200px; margin-bottom: 10px;">
+                    <p>👥 Passengers: 5</p>
+                    <p>🛄 Luggage Capacity: Large: 2, Small: 2</p>
+                    <p>🚗 Type: Automatic</p>
+                    <p>❄️ Air Conditioning: Yes</p>
+                    <p>🛣️ Approximate Mileage: 12 km/L</p>
+                    <p>💰 Rate per Day: ₹50,000</p>
+                </div>
+            `;
+            break;
+        case 'Toyota':
+            carDetailsHTML = `
+                <div style="background-color: #f9f9f9; border: 2px solid #333; border-radius: 10px; padding: 20px; text-align: center;">
+                    <img src="toyota.jpg" alt="Toyota" style="width: 200px; margin-bottom: 10px;">
+                    <p>👥 Passengers: 5</p>
+                    <p>🛄 Luggage Capacity: Large: 2, Small: 2</p>
+                    <p>🚗 Type: Automatic</p>
+                    <p>❄️ Air Conditioning: Yes</p>
+                    <p>🛣️ Approximate Mileage: 14 km/L</p>
+                    <p>💰 Rate per Day: ₹45,000</p>
+                </div>
+            `;
+            break;
+        case 'BMW':
+            carDetailsHTML = `
+                <div style="background-color: #f9f9f9; border: 2px solid #333; border-radius: 10px; padding: 20px; text-align: center;">
+                    <img src="bmw.jpg" alt="BMW" style="width: 200px; margin-bottom: 10px;">
+                    <p>👥 Passengers: 4</p>
+                    <p>🛄 Luggage Capacity: Large: 1, Small: 2</p>
+                    <p>🚗 Type: Automatic</p>
+                    <p>❄️ Air Conditioning: Yes</p>
+                    <p>🛣️ Approximate Mileage: 10 km/L</p>
+                    <p>💰 Rate per Day: ₹60,000</p>
+                </div>
+            `;
+            break;
+        case 'Maruti':
+            carDetailsHTML = `
+                <div style="background-color: #f9f9f9; border: 2px solid #333; border-radius: 10px; padding: 20px; text-align: center;">
+                    <img src="maruti.jpg" alt="Maruti" style="width: 200px; margin-bottom: 10px;">
+                    <p>👥 Passengers: 4</p>
+                    <p>🛄 Luggage Capacity: Large: 1, Small: 2</p>
+                    <p>🚗 Type: Manual</p>
+                    <p>❄️ Air Conditioning: Yes</p>
+                    <p>🛣️ Approximate Mileage: 18 km/L</p>
+                    <p>💰 Rate per Day: ₹4,000</p>
+                </div>
+            `;
+            break;
+        case 'Mahindra':
+            carDetailsHTML = `
+                <div style="background-color: #f9f9f9; border: 2px solid #333; border-radius: 10px; padding: 20px; text-align: center;">
+                    <img src="mahindra.jpg" alt="Mahindra" style="width: 200px; margin-bottom: 10px;">
+                    <p>👥 Passengers: 7</p>
+                    <p>🛄 Luggage Capacity: Large: 3, Small: 2</p>
+                    <p>🚗 Type: Manual</p>
+                    <p>❄️ Air Conditioning: Yes</p>
+                    <p>🛣️ Approximate Mileage: 15 km/L</p>
+                    <p>💰 Rate per Day: ₹5,500</p>
+                </div>
+            `;
+            break;
+        case 'Rolls Royce':
+            carDetailsHTML = `
+                <div style="background-color: #f9f9f9; border: 2px solid #333; border-radius: 10px; padding: 20px; text-align: center;">
+                    <img src="rollsroyce.jpg" alt="Rolls Royce" style="width: 200px; margin-bottom: 10px;">
+                    <p>👥 Passengers: 4</p>
+                    <p>🛄 Luggage Capacity: Large: 2, Small: 2</p>
+                    <p>🚗 Type: Automatic</p>
+                    <p>❄️ Air Conditioning: Yes</p>
+                    <p>🛣️ Approximate Mileage: 8 km/L</p>
+                    <p>💰 Rate per Day: ₹20,000</p>
+                </div>
+            `;
+            break;
+    }
+
+    var carDetailsDiv = document.getElementById("car-details");
+    carDetailsDiv.innerHTML = carDetailsHTML;
+
+    document.getElementById("confirm-box").style.display = "block";
+}
+
+
+    function confirmBooking() {
+        document.getElementById('bill').style.display = 'block';
+
+        document.getElementById('pickup-location-display').textContent = document.getElementById('pickup-location').value;
+        document.getElementById('drop-location-display').textContent = document.getElementById('drop-location').value;
+        document.getElementById('pickup-date-display').textContent = document.getElementById('pickup-date').value;
+        document.getElementById('pickup-time-display').textContent = document.getElementById('pickup-time').value;
+        document.getElementById('return-date-display').textContent = document.getElementById('return-date').value;
+        document.getElementById('return-time-display').textContent = document.getElementById('return-time').value;
+        document.getElementById('car-selected-display').textContent = document.getElementById('car-selection').value;
+
+        var reservationNumber = Math.floor(Math.random() * 1000000);
+        document.getElementById('reservation-number').textContent = reservationNumber;
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
